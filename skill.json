@@ -1,0 +1,39 @@
+{
+  "name": "genpark-operator-multi-step-transaction-funnel-orchestrator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - OpenAI Operator style autonomous multi-step checkout funnel transaction orchestrator with captcha/verification recovery.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "agent-commerce",
+  "tags": [
+    "openai-operator",
+    "checkout-funnel",
+    "operator-agent",
+    "autonomous-buy",
+    "transaction-orchestrator"
+  ],
+  "inputs": {
+    "checkout_session_id": {
+      "type": "string"
+    },
+    "steps_definition": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "orchestrator_run_id": {
+      "type": "string"
+    },
+    "funnel_status": {
+      "type": "string"
+    },
+    "payment_token_dispatched": {
+      "type": "boolean"
+    },
+    "operator_audit_replay_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
